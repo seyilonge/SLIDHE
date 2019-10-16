@@ -15,7 +15,7 @@
     <body>
         <header>
             <div class="header-container">Place container</div>
-            <na>Navigation Container</na>
+            <nav>Navigation Container</nav>
         </header>
         <main>
             <section class="feature-product-container">
@@ -36,7 +36,39 @@
                             <li>Made in the Philippines</li>
                         </ul>
                         <div class="selection">
+                            <select id="product-size"
+                                    class="product-size"
+                                    size=""
+                                    name="productSize"
+                                    onChange="">
+                                <option value="">Select Size</option>
+                                <option value="xs">Extra Small</option>
+                                <option value="sm">Small</option>
+                                <option value="med">Medium</option>
+                                <option value="lg">Large</option>
+                                <option value="xlg">Extra Large</option>
+                            </select>
 
+                            <select id="product-color"
+                                    class="product-color"
+                                    size=""
+                                    name="productColor"
+                                    onChange="">
+                                <option value="">Select Color</option>
+                                <option value="grey">Grey</option>
+                                <option value="black">Black</option>
+                                <option value="maroon">Maroon</option>
+                                <option value="blue">Blue</option>
+                                <option value="xlg">Extra Large</option>
+                            </select>
+                        </div>
+                        <div class="">
+                            <div class="quantity">
+                                <button name="incrementQuantity" class="increment-quantity"></button>
+                                <input type="text" class="selected-quantity" value="1" size="2">
+                                <button name="decrementQuantity" class="decrement-quantity"></button>
+                            </div>
+                            <button class="add-to-cart">Add To Cart</button>
                         </div>
                     </div>
                 </div>

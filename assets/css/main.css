@@ -49,9 +49,41 @@ main section.feature-product-container .feature-product {
     text-transform: uppercase;
 
 }
+
 main section:nth-child(2) {
     background-color: #ccc;
 }
+
+.feature-product-container .feature-product .description .selection {
+    margin-bottom: 35px;
+}
+
+select.product-size,
+select.product-color {
+    margin-right: 35px;
+    padding: 8px 25px;
+    color: #fff;
+    background-color: #4698a4;
+}
+
+.quantity {
+    display: inline-block;
+}
+.quantity button {
+    height: 29px;
+    background-color: #4698a4;
+}
+.quantity input {
+    padding: 5px 25px;
+}
+
+button {
+    padding: 10px 25px;
+    color: #fff;
+    border: none;
+    background-color: #4698a4;
+}
+
 main section.reviews {
     background-color: #00314f;
 }
