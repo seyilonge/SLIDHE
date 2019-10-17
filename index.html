@@ -11,17 +11,48 @@
         <meta name="theme-color" content="#ffffff">
         <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500" rel="stylesheet" type="text/css">
         <link href="./assets/css/main.css" rel="stylesheet" type="text/css">
+        <script src="https://kit.fontawesome.com/6102b38fa6.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
     </head>
     <body>
         <header>
             <div class="header-container">
-                <img src="./assets/images/axiom-logo-main.png" alt="Axium Logo">
+                <div class="logo-container">
+                    <img src="./assets/images/axiom-logo-main.png" alt="Axium Logo">
+                </div>
                 <div class="search-header-links">
                     <input class="search-input" type="text" name="search" placeholder="SEARCH FOR GEAR">
-                    <div class="header-links">Social Links & Logout</div>
+                    <button class="search" name="search">
+                        <img src="./assets/images/search-icon.png" alt="Search Icon">
+                    </button>
+                    <div class="header-links">
+                        <div><img src="./assets/images/fb-icon.png" alt="Facebook"></div>
+                        <div><img src="./assets/images/twitter-icon.png" alt="Twitter"></div>
+                        <span><a href="#">My Account</a></span>
+                        <span><a href="#">Cart</a></span>
+                        <span><a href="#">Logout</a></span>
+                    </div>
                 </div>
             </div>
-            <nav>Navigation Container</nav>
+            <nav class="top-nav">
+                <ul class="menu" role="menu">
+                    <li>Camping</li>
+                    <li>
+                        Clothing
+                        <ul class="sub-menu" role="menu">
+                            <li>Outerwear</li>
+                            <li>Hiking Shoes / Boots</li>
+                            <li>Gloves</li>
+                            <li>Hats</li>
+                        </ul>
+                    </li>
+                    <li>Fishing</li>
+                    <li>Hiking</li>
+                    <li>Biking</li>
+                </ul>
+            </nav>
         </header>
         <main>
             <section class="feature-product-container">
@@ -80,36 +111,102 @@
                     </div>
                 </div>
             </section>
-            <section>
-                <div><img src="./assets/images/tough-mojo-jacket-img2.png" alt="Tough Mojo Jacket Blue"></div>
-                <div>
-                    <p>
-                        Our most insulated jacket to date, the city-styled Highline is designed to keep
-                        you warm during the deep freeze of the winter.
-                    </p>
-                    <p>
-                        With 300 grams of Primaloft<sup>&reg;</sup> ONE insulation, the Highline offers
-                        incredible heat retention while remaining form fitting and low volume&mdash;essentially
-                        all the warmth of a puffer jacket without the puff. It's outer shell is made from a
-                        water resistant Schoeller<sup>&reg;</sup> microfiber fabric that has been diagonally
-                        quilted, while it's inside liner is made from a silky-soft microfiber ripstop nylon.
-                    </p>
-                    <p>
-                        The Highline features a zipper garage to prevent a cold metal zipper from pressing
-                        against your neck, non quilted side panels and underarms for a slicker fit, and
-                        anchored bottom-hem adjusters for a snug fit. It has two uniquely designed 3-in-1
-                        front pockets, which include a top-zippered entrance, a top pocket with donut snap,
-                        and a side hand-warmer. Additional storage can be found in it's exterior chest
-                        pocket and two interior zippered pockets.
-                    </p>
+            <section class="highlight-container">
+                <div class="highlight">
+                    <div class="left-content"><img src="./assets/images/tough-mojo-jacket-img2.png" alt="Tough Mojo Jacket Blue"></div>
+                    <div class="right-content">
+                        <p>
+                            Our most insulated jacket to date, the city-styled Highline is designed to keep
+                            you warm during the deep freeze of the winter.
+                        </p>
+                        <p>
+                            With 300 grams of Primaloft<sup>&reg;</sup> ONE insulation, the Highline offers
+                            incredible heat retention while remaining form fitting and low volume&mdash;essentially
+                            all the warmth of a puffer jacket without the puff. It's outer shell is made from a
+                            water resistant Schoeller<sup>&reg;</sup> microfiber fabric that has been diagonally
+                            quilted, while it's inside liner is made from a silky-soft microfiber ripstop nylon.
+                        </p>
+                        <p>
+                            The Highline features a zipper garage to prevent a cold metal zipper from pressing
+                            against your neck, non quilted side panels and underarms for a slicker fit, and
+                            anchored bottom-hem adjusters for a snug fit. It has two uniquely designed 3-in-1
+                            front pockets, which include a top-zippered entrance, a top pocket with donut snap,
+                            and a side hand-warmer. Additional storage can be found in it's exterior chest
+                            pocket and two interior zippered pockets.
+                        </p>
+                    </div>
                 </div>
             </section>
-            <section class="reviews">
-                <div>Review Section</div>
+            <section class="reviews-container">
+                <div class="reviews">
+                    <h3>Reviews</h3>
+                    <span class="review-tagline">Write a review on this product</span>
+                    <div class="user-review">
+                        <div class="image-container">
+                            <img src="./assets/images/reviewer1.png">
+                            <div class="name">Shaun White</div>
+                        </div>
+                        <div class="comment">
+                            <h4>This Thing is a monster!</h4>
+                            <span class="date">08/20/2013</span>
+                            <span class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </span>
+                            <p>
+                                I picked up this jacket for use in San Francisco and the surrounding Bat Area (Lake Tahoe included).
+                                I use this jacket for everything. It is often cloudy/drizzly/cold in SF and this jacket deals
+                                with it all. I have not tried in heavy rain, but in drizzly conditions, the DWR treatment definitely
+                                makes small drops bead right off. It also has a nice
+                            </p>
+                        </div>
+                    </div>
+                    <div class="user-review">
+                            <div class="image-container">
+                                <img src="./assets/images/reviewer2.png">
+                                <div class="name">Jennie Loren</div>
+                            </div>
+                            <div class="comment">
+                                <h4>Luv it so much I bought 2!</h4>
+                                <span class="date">01/12/2013</span>
+                                <span class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </span>
+                                <p>
+                                    Loved this jacket so much from previous years I decided to buy a second in a different color.
+                                    I'm tall and fairly slender and it's tailored silhouette fits me nicely. For perspective I'm around
+                                    6'3" -150lbs, and a large does the trick. I'll wear this for all of fall and into the winter.
+                                    Despite not being bulky or buggy I find it good and warm for anything down to 40 degrees and
+                                    perhaos lower if you're keeping up on your layering. For weather at freezing or below you should
+                                    consider something heavier.
+                                </p>
+                            </div>
+                        </div>
+                </div>
             </section>
         </main>
         <footer>
-
+            <div class="footer-logo">
+                <img src="./assets/images/axiom-logo-small.png" alt="Axium Logo">
+            </div>
+            <nav class="footer-links">
+                <ul>
+                    <li>About Us</li>
+                    <li>Contact Us</li>
+                    <li>Privacy Policy</li>
+                    <li>Terms of Service</li>
+                    <li>Site Map</li>
+                </ul>
+            </div>
+            <div class="footer-social-links">
+                <img src="./assets/images/fb-icon.png" alt="Facebook">
+                <img src="./assets/images/twitter-icon.png" alt="Twitter">
+            </div>
         </footer>
 
     </body>

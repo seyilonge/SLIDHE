@@ -8,8 +8,57 @@ header {
     background-color: #000;
 }
 header .header-container {
+    padding-left: 25%;
+    padding-right: 25%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
     height: 125px;
 }
+header .header-container .logo-container {
+    flex: 1;
+}
+header .header-container .logo-container img {
+    max-width: 80%;
+}
+header .header-container .search-header-links {
+    flex: 2;
+    text-align: right;
+}
+
+input[type=text].search-input {
+    width: 192px;
+    padding: 4px 10px;
+    font-size: 0.75em;
+}
+
+button.search {
+    display: inline-block;
+    margin-left: -32px;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+}
+.header-links {
+    color: #fff;
+    font-size: 0.8em;
+}
+.header-links div {
+    display: inline-block;
+}
+.header-links span+span::before {
+    padding-left: 5px;
+    padding-right: 5px;
+    content: "|";
+}
+.header-links a,
+.header-links a:hover,
+.header-links a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+
 header nav {
     height: 55px;
     color: #2d5463;
@@ -19,21 +68,21 @@ header nav {
 main {
     color: #fff;
 }
-main section.feature-product {
-    padding-left: 40px;
-    padding-right: 40px;
+main section.feature-product-container {
+    padding-left: 25%;
+    padding-right: 25%;
     min-height: 400px;
     background-image: url('../images/topsection-background.png');
     background-repeat: no-repeat;
 }
 main section.feature-product-container .feature-product {
-    width: 650px;
-    padding: 20px;
     display: flex;
+    padding-top: 45px;
+    padding-bottom: 45px;
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-between;
-    background-color: #364d53;
+    background-color: rgba(55, 79, 83, 0.4)
 }
 .feature-product-container .feature-product .item {
     flex: 1;
@@ -43,6 +92,7 @@ main section.feature-product-container .feature-product {
 }
 .feature-product-container .feature-product .item {
     flex: 1;
+
 }
 .feature-product-container .feature-product .description {
     margin-left: 25px;
@@ -63,10 +113,6 @@ main section.feature-product-container .feature-product {
 
 }
 
-main section:nth-child(2) {
-    background-color: #ccc;
-}
-
 .feature-product-container .feature-product .description .selection {
     margin-bottom: 35px;
 }
@@ -76,6 +122,7 @@ select.product-color {
     margin-right: 35px;
     padding: 8px 25px;
     color: #fff;
+    border: none;
     background-color: #678792;
 }
 
@@ -90,18 +137,101 @@ select.product-color {
     padding: 5px 25px;
 }
 
-button {
+button.add-to-cart {
     padding: 10px 25px;
     color: #fff;
     border: none;
     background-color: #4698a4;
 }
 
-main section.reviews {
-    background-color: #00314f;
+main section.highlight-container {
+    padding: 25px 25%;
+    background-color: #898989;
+}
+main section.highlight-container .highlight {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+main section.highlight-container .highlight .left-content {
+    flex: 1;
+}
+main section.highlight-container .highlight .right-content {
+    flex: 2;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: left;
 }
 
+main section.reviews-container {
+    padding: 25px 25%;
+    background-color: #00314f;
+}
+main section.reviews-container .reviews h3 {
+    display: inline-block;
+    font-size: 2em;
+    font-weight: normal;
+}
+main section.reviews-container .reviews .review-tagline {
+    padding-left: 45px;
+    text-decoration: underline;
+}
+main section.reviews-container .reviews .user-review {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.user-review .image-container {
+    flex: 1;
+    text-align: left;
+}
+.user-review .comment {
+    flex: 3;
+    text-align: left;
+}
+.user-review .comment h4 {
+    display: inline-block;
+}
+.user-review .comment .date,
+.user-review .comment .rating {
+    padding-left: 15px;
+}
+/* main section.reviews-container .reviews h3 {
+
+} */
+
 footer {
+    padding: 15px 25%;
     color: #fff;
+    font-size: 0.8em;
     background-color: #000;
+}
+footer .footer-logo {
+    display: inline-block;
+}
+footer .footer-links {
+    display: inline-block;
+    width: 86%;
+
+}
+footer .footer-links ul {
+    margin-left: 0;
+    padding-left: 15px;
+    padding-inline-start: 0;
+    display: inline;
+    list-style-type: none;
+}
+footer .footer-links ul li {
+    display: inline-block;
+
+}
+footer .footer-links ul li+li::before {
+    padding-left: 5px;
+    padding-right: 8px;
+    content: "|";
+}
+footer .footer-links .footer-social-links {
+    display: inline;
 }
