@@ -1,4 +1,6 @@
 body {
+    margin: 0;
+    padding: 0;
     text-align: center;
     font-family: 'Raleway', sans-serif;
 }
@@ -60,9 +62,69 @@ button.search {
 }
 
 header nav {
-    height: 55px;
+    padding: 13px 25%;
     color: #2d5463;
+    font-size: 1.5em;
     background-color: #ececec;
+}
+.top-nav ul.menu,
+.top-nav ul.menu li {
+    margin: 0;
+    padding: 0;
+    padding-inline-start: 0;
+    list-style-type: none;
+    list-style: none;
+}
+.top-nav ul.menu li {
+    display: inline;
+    padding-right: 8px;
+}
+.top-nav ul.menu li:hover {
+    position: relative;
+}
+.top-nav ul.menu li a,
+.top-nav ul.menu li a:hover,
+.top-nav ul.menu li a:visited {
+    display: inline-block;
+    color: #2d5463;
+    text-decoration: none;
+}
+
+.top-nav ul.menu i {
+    vertical-align: bottom;
+}
+.top-nav ul.menu i::after {
+    padding-left: 10px;
+    content: "|";
+}
+.top-nav ul.menu i:last-child::after {
+    content: "";
+}
+.top-nav ul.menu li ul.sub-menu {
+    position: absolute;
+    display: none;
+    margin: 0;
+    padding:0;
+    padding-inline-start: 0;
+    list-style-type: none;
+    background-color: #fff;
+}
+
+.top-nav ul.menu li:hover ul.sub-menu {
+    display: block;
+    top: 25px;
+    left: 0;
+    width: 300px;
+}
+.top-nav ul.menu li ul.sub-menu li {
+    display: block;
+    padding: 8px 15px;
+    float: none;
+
+}
+.top-nav ul.menu li ul.sub-menu li:hover {
+    background-color: #4698a4;
+    cursor: pointer;
 }
 
 main {
@@ -173,9 +235,12 @@ main section.reviews-container .reviews h3 {
     font-size: 2em;
     font-weight: normal;
 }
-main section.reviews-container .reviews .review-tagline {
+
+main section.reviews-container .reviews a.review-tagline,
+main section.reviews-container .reviews a.review-tagline:hover,
+main section.reviews-container .reviews a.review-tagline:visited {
     padding-left: 45px;
-    text-decoration: underline;
+    color: #fff;
 }
 main section.reviews-container .reviews .user-review {
     display: flex;
@@ -198,9 +263,34 @@ main section.reviews-container .reviews .user-review {
 .user-review .comment .rating {
     padding-left: 15px;
 }
-/* main section.reviews-container .reviews h3 {
 
-} */
+#review-modal {
+    font-family: 'Raleway', sans-serif;
+    border-radius: 0;
+}
+#review-modal i {
+    color: #4698a4;
+}
+#review-modal input[type=text] {
+    margin-top: 10px;
+    padding: 5px;
+}
+#review-modal textarea {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+#review-modal button {
+    border: none;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 8px 15px;
+    color: #fff;
+    font-size: 1.25rem;
+    background-color: #4698a4;
+}
 
 footer {
     padding: 15px 25%;
