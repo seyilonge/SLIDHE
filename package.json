@@ -1,0 +1,23 @@
+{
+  "name": "slidhe",
+  "version": "1.0.0",
+  "description": "Marketplace Inc. Product showcase",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "node ./server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seyilonge/SLIDHE.git"
+  },
+  "author": "seyi longe",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/seyilonge/SLIDHE/issues"
+  },
+  "homepage": "https://github.com/seyilonge/SLIDHE#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

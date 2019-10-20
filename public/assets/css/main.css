@@ -154,7 +154,6 @@ main section.feature-product-container .feature-product {
 }
 .feature-product-container .feature-product .item {
     flex: 1;
-
 }
 .feature-product-container .feature-product .description {
     margin-left: 25px;
@@ -172,7 +171,6 @@ main section.feature-product-container .feature-product {
 .feature-product-container .feature-product .description ul li {
     padding-bottom: 8px;
     text-transform: uppercase;
-
 }
 
 .feature-product-container .feature-product .description .selection {
@@ -244,8 +242,8 @@ main section.reviews-container .reviews a.review-tagline:visited {
 }
 main section.reviews-container .reviews .user-review {
     display: flex;
+    padding-top: 20px;;
     flex-flow: row wrap;
-    align-items: center;
     justify-content: space-between;
 }
 .user-review .image-container {
@@ -258,6 +256,7 @@ main section.reviews-container .reviews .user-review {
 }
 .user-review .comment h4 {
     display: inline-block;
+    margin-top: 0;
 }
 .user-review .comment .date,
 .user-review .comment .rating {
@@ -290,6 +289,7 @@ main section.reviews-container .reviews .user-review {
     color: #fff;
     font-size: 1.25rem;
     background-color: #4698a4;
+    cursor: pointer;
 }
 
 footer {
