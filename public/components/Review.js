@@ -16,6 +16,10 @@ class Review extends Observer {
                 <a id="review-modal-link" class="review-tagline" href="#review-modal" rel="modal:open">Write a review on this product</a>
                 ${reviews.map( ( review, index ) => {
                     const { comment, date, name, rating, title } = review;
+                    let ratingsStarString = '';
+                    for ( let i = 0; i < Number(rating); i++ ) {
+                        ratingsStarString = `${ratingsStarString}<i class="fas fa-star"></i>`;
+                    }
                     return `
                         <div class="user-review">
                             <div class="image-container">
@@ -25,12 +29,7 @@ class Review extends Observer {
                             <div class="comment">
                                 <h4>${title}</h4>
                                 <span class="date">${date}</span>
-                                <span class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    ${rating} star
-                                </span>
+                                <span class="rating">${ratingsStarString}</span>
                                 <p>${comment}</p>
                             </div>
                         </div>
@@ -41,7 +40,6 @@ class Review extends Observer {
     }
 
     render ( state, selector ) {
-        console.log( 'Review - render: ', state, selector );
         const markup = this.createMarkup( state );
         const parent = document.getElementById( selector );
 
@@ -50,6 +48,7 @@ class Review extends Observer {
 
     bindEvents ( state ) {
         const reviewModalButton = document.getElementById( 'submit-review' );
+        const reviewRatingButtons = document.getElementsByClassName( 'review-rating' );
 
         reviewModalButton.addEventListener( 'click', event => {
             event.preventDefault();
@@ -64,6 +63,7 @@ class Review extends Observer {
                 comment: comment.value,
                 date,
                 name: 'Anonymous',
+                rating: 5,
                 title: title.value
             };
 
@@ -77,7 +77,7 @@ class Review extends Observer {
             // Save to browser session
             const sessionStorage = window.sessionStorage;
             const cachedReviews = sessionStorage.getItem( cacheKeys.PRODUCT_REVIEWS );
-            console.log('Review - binder', cachedReviews, userReview)
+
             if ( cachedReviews == null ) {
                 const cachedUserReview = JSON.stringify( [userReview] );
                 sessionStorage.setItem( cacheKeys.PRODUCT_REVIEWS, cachedUserReview );
@@ -99,11 +99,18 @@ class Review extends Observer {
             // Close modal
             body.style.overflow = 'unset';
             reviewModal.style.display = 'none';
-
-            console.log( 'Review - bindEvent:', userReview, this.appState.get() );
         } );
 
         // Add event for rating ( review-rating )
+        for ( let i = 0; i < reviewRatingButtons.length; i++ ) {
+            reviewRatingButtons[i].addEventListener( 'click', event => {
+                event.preventDefault();
+
+                const { target } = event;
+                target.outerHTML = '<i class="review-rating fas fa-star"></i>';
+                console.log( `${i + 1} star rating clicked!` );
+            } );
+        }
     }
 
     update ( state ) {

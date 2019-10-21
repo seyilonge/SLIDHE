@@ -28,10 +28,13 @@ header .header-container .search-header-links {
     flex: 2;
     text-align: right;
 }
+header .header-container .search-header-links img {
+    padding-top: 5px;
+}
 
 input[type=text].search-input {
-    width: 192px;
-    padding: 4px 10px;
+    width: 260px;
+    padding: 5px 10px;
     font-size: 0.75em;
 }
 
@@ -43,11 +46,17 @@ button.search {
     cursor: pointer;
 }
 .header-links {
+    display: flex;
+    padding-top: 15px;
+    align-items: center;
+    justify-content: flex-end;
     color: #fff;
     font-size: 0.8em;
 }
 .header-links div {
     display: inline-block;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 .header-links span+span::before {
     padding-left: 5px;
@@ -57,6 +66,7 @@ button.search {
 .header-links a,
 .header-links a:hover,
 .header-links a:visited {
+    padding: 0 10px;
     color: #fff;
     text-decoration: none;
 }
@@ -67,17 +77,18 @@ header nav {
     font-size: 1.5em;
     background-color: #ececec;
 }
-.top-nav ul.menu,
-.top-nav ul.menu li {
+.top-nav ul.menu {
     margin: 0;
     padding: 0;
+    display: flex;
     padding-inline-start: 0;
     list-style-type: none;
     list-style: none;
 }
-.top-nav ul.menu li {
-    display: inline;
+.top-nav ul.menu > li {
+    flex: 1;
     padding-right: 8px;
+    border-right: 2px solid #2d5463;
 }
 .top-nav ul.menu li:hover {
     position: relative;
@@ -91,35 +102,33 @@ header nav {
 }
 
 .top-nav ul.menu i {
+    padding-left: 8px;
     vertical-align: bottom;
 }
-.top-nav ul.menu i::after {
-    padding-left: 10px;
-    content: "|";
-}
-.top-nav ul.menu i:last-child::after {
-    content: "";
+.top-nav ul.menu li:last-child {
+    border-right: none;
 }
 .top-nav ul.menu li ul.sub-menu {
     position: absolute;
-    display: none;
     margin: 0;
     padding:0;
+    height: 0;
+    width: 300px;
     padding-inline-start: 0;
     list-style-type: none;
     background-color: #fff;
+    overflow: hidden;
+    transition: height 0.3s ease-in;
 }
 
 .top-nav ul.menu li:hover ul.sub-menu {
-    display: block;
-    top: 25px;
-    left: 0;
-    width: 300px;
+    height: 200px;
 }
 .top-nav ul.menu li ul.sub-menu li {
     display: block;
     padding: 8px 15px;
     float: none;
+
 
 }
 .top-nav ul.menu li ul.sub-menu li:hover {
@@ -159,6 +168,18 @@ main section.feature-product-container .feature-product {
     margin-left: 25px;
     margin-right: 25px;
 }
+.feature-product-container .feature-product .description h4 {
+    margin: 0;
+    padding: 5px 0;
+    font-size: 2em;
+    font-weight: normal;
+    text-align: left;
+}
+.feature-product-container .feature-product .description h5 {
+    margin: 5px 0;
+    font-weight: normal;
+    text-align: left;
+}
 .feature-product-container .feature-product .description ul {
     margin-top: 25px;
     margin-bottom: 25px;
@@ -186,15 +207,38 @@ select.product-color {
     background-color: #678792;
 }
 
+.cart-selection {
+    text-align: left;
+}
+
 .quantity {
     display: inline-block;
+    margin-right: 75px;
 }
-.quantity button {
-    height: 29px;
+/* .quantity button.increment-quantity,
+.quantity button.decrement-quantity {
+    margin: -4px 0;
+    padding: 10px;
+    border: none;
+    text-align: center;
+    vertical-align: middle;
     background-color: #678792;
+} */
+/* .quantity button.decrement-quantity {
+
+} */
+.quantity button {
+    margin: 0 -4px;
+    padding: 10px;
+    color: #fff;
+    border: none;
+    background-color: #678792;
+    cursor: pointer;
 }
 .quantity input {
-    padding: 5px 25px;
+    margin: 0;
+    padding: 8px 20px;
+    width: 8px;
 }
 
 button.add-to-cart {
@@ -211,11 +255,13 @@ main section.highlight-container {
 main section.highlight-container .highlight {
     display: flex;
     flex-flow: row wrap;
-    align-items: center;
     justify-content: space-between;
 }
 main section.highlight-container .highlight .left-content {
-    flex: 1;
+    flex: 3;
+}
+.highlight .left-content img {
+    max-width: 100%;
 }
 main section.highlight-container .highlight .right-content {
     flex: 2;
@@ -267,9 +313,6 @@ main section.reviews-container .reviews .user-review {
     font-family: 'Raleway', sans-serif;
     border-radius: 0;
 }
-#review-modal i {
-    color: #4698a4;
-}
 #review-modal input[type=text] {
     margin-top: 10px;
     padding: 5px;
@@ -289,6 +332,12 @@ main section.reviews-container .reviews .user-review {
     color: #fff;
     font-size: 1.25rem;
     background-color: #4698a4;
+    cursor: pointer;
+}
+#review-modal .review-rating {
+    margin: 0;
+    padding: 0 2px;
+    color: #4698a4;
     cursor: pointer;
 }
 
@@ -325,3 +374,5 @@ footer .footer-links ul li+li::before {
 footer .footer-links .footer-social-links {
     display: inline;
 }
+
+

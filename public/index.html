@@ -25,7 +25,7 @@
                     </button>
                     <div class="header-links">
                         <div><img src="./assets/images/fb-icon.png" alt="Facebook"></div>
-                        <div><img src="./assets/images/twitter-icon.png" alt="Twitter"></div>
+                        <div><img src="./assets/images/twitter-icon-new.png" alt="Twitter"></div>
                         <span><a href="#">My Account</a></span>
                         <span><a href="#">Cart</a></span>
                         <span><a href="#">Logout</a></span>
@@ -34,7 +34,7 @@
             </div>
             <nav class="top-nav">
                 <ul class="menu" role="menu">
-                    <li><a href="#"><a href="#">Camping</a></li><i class="fas fa-angle-down"></i>
+                    <li><a href="#">Camping</a><i class="fas fa-angle-down"></i></li>
                     <li>
                         <a href="#">Clothing</a>
                         <ul class="sub-menu" role="menu">
@@ -43,10 +43,11 @@
                             <li>Gloves</li>
                             <li>Hats</li>
                         </ul>
-                    </li><i class="fas fa-angle-down"></i>
-                    <li><a href="#">Fishing</a></li><i class="fas fa-angle-down"></i>
-                    <li><a href="#">Hiking</a></li><i class="fas fa-angle-down"></i>
-                    <li><a href="#">Biking</a></li><i class="fas fa-angle-down"></i>
+                        <i class="fas fa-angle-down"></i>
+                    </li>
+                    <li><a href="#">Fishing</a><i class="fas fa-angle-down"></i></li>
+                    <li><a href="#">Hiking</a><i class="fas fa-angle-down"></i></li>
+                    <li><a href="#">Biking</a><i class="fas fa-angle-down"></i></li>
                 </ul>
             </nav>
         </header>
@@ -95,12 +96,13 @@
                                 <option value="xlg">Extra Large</option>
                             </select>
                         </div>
-                        <div class="">
+
+                        <h5>Quantity</h5>
+                        <div class="cart-selection">
                             <div class="quantity">
-                                <h6>Quantity</h6>
-                                <button name="incrementQuantity" class="increment-quantity"></button>
+                                <button class="increment-quantity"><i class="fas fa-caret-down"></i></button>
                                 <input type="text" class="selected-quantity" value="1" size="2">
-                                <button name="decrementQuantity" class="decrement-quantity"></button>
+                                <button class="decrement-quantity"><i class="decrement-quantity fas fa-caret-up"></i></button>
                             </div>
                             <button class="add-to-cart">Add To Cart</button>
                         </div>
@@ -137,13 +139,13 @@
             <section id="reviews-section-container" class="reviews-container"></section>
 
             <div id="review-modal" class="modal">
-                <div id="review-rating">
+                <div>
                     Please Rate the <strong>Tough Mojo Jacket</strong><sup>&reg;</sup>
-                    <i class="fas fa-star">1</i>
-                    <i class="fas fa-star">2</i>
-                    <i class="fas fa-star">3</i>
-                    <i class="far fa-star">4</i>
-                    <i class="far fa-star">5</i>
+                    <i class="review-rating 1 far fa-star"></i>
+                    <i class="review-rating 2 far fa-star"></i>
+                    <i class="review-rating 3 far fa-star"></i>
+                    <i class="review-rating 4 far fa-star"></i>
+                    <i class="review-rating 5 far fa-star"></i>
                 </div>
                 <label for="review-title" class="">Review Title: </label>
                 <input id="review-title" class="review-title" type="text" size="42">
@@ -167,7 +169,7 @@
             </div>
             <div class="footer-social-links">
                 <img src="./assets/images/fb-icon.png" alt="Facebook">
-                <img src="./assets/images/twitter-icon.png" alt="Twitter">
+                <img src="./assets/images/twitter-icon-new.png" alt="Twitter">
             </div>
         </footer>
         <script type="module" src="./assets/js/main.js" crossorigin="anonymous"></script>

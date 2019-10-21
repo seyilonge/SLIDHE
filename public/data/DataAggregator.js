@@ -2,14 +2,13 @@ import { cacheKeys } from '../constants.js';
 
 /**
  * @typedef Review
- * @type {Object}
+ * @type {object}
  * @property {string} comment
  * @property {date} date
  * @property {string} name
  * @property {number} rating
  * @property {string} title
  */
-
 
 /**
  * Returns default predefined reviews
