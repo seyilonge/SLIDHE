@@ -122,7 +122,7 @@ header nav {
 }
 
 .top-nav ul.menu li:hover ul.sub-menu {
-    height: 200px;
+    height: 180px;
 }
 .top-nav ul.menu li ul.sub-menu li {
     display: block;
