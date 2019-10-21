@@ -228,8 +228,8 @@ select.product-color {
 
 } */
 .quantity button {
-    margin: 0 -4px;
-    padding: 10px;
+    margin: 0 -5px;
+    padding: 8px 10px;
     color: #fff;
     border: none;
     background-color: #678792;
@@ -239,6 +239,7 @@ select.product-color {
     margin: 0;
     padding: 8px 20px;
     width: 8px;
+    border: none;
 }
 
 button.add-to-cart {
